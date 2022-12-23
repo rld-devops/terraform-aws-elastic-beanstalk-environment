@@ -512,7 +512,7 @@ locals {
     {
       namespace = "aws:elasticbeanstalk:environment:process:default"
       name      = "Protocol"
-      value     = var.loadbalancer_type == "network" ? "TCP" : "HTTP"
+      value     = var.loadbalancer_type == "network" ? "TCP" : var.application_protocol
     },
     {
       namespace = "aws:ec2:vpc"

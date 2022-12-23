@@ -287,6 +287,12 @@ variable "application_port" {
   description = "Port application is listening on"
 }
 
+variable "application_protocol" {
+  type        = string
+  default     = "HTTP"
+  description = "Port protocol is listening on. HTTP or HTTPS"
+}
+
 variable "preferred_start_time" {
   type        = string
   default     = "Sun:10:00"
