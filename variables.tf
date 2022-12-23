@@ -373,7 +373,7 @@ variable "elb_scheme" {
 
 variable "ssh_source_restriction" {
   type        = string
-  default     = "0.0.0.0/0"
+  default     = "127.0.0.1/32"
   description = "Used to lock down SSH access to the EC2 instances"
 }
 
