@@ -412,6 +412,11 @@ locals {
       value     = "true"
     },
     {
+      namespace = "aws:elasticbeanstalk:environment:process:default"
+      name      = "Protocol"
+      value     = var.loadbalancer_type == "network" ? "TCP" : var.application_protocol
+    },
+    {
       namespace = "aws:elbv2:loadbalancer"
       name      = "SharedLoadBalancer"
       value     = var.shared_loadbalancer_arn
