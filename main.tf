@@ -413,6 +413,11 @@ locals {
     },
     {
       namespace = "aws:elasticbeanstalk:environment:process:default"
+      name      = "Port"
+      value     = var.application_port
+    },
+    {
+      namespace = "aws:elasticbeanstalk:environment:process:default"
       name      = "Protocol"
       value     = var.loadbalancer_type == "network" ? "TCP" : var.application_protocol
     },
